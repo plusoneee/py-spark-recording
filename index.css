@@ -7,22 +7,22 @@ body {
 .inputPassword
     {
     margin:3px;
-    height:45px;
-    width:290px;
-    background:url(https://github.com/Plusone7/web_img/blob/master/img/pswInput@2x.png?raw=true) no-repeat; 
+    height:36px;
+    width:300px;
+    background:url(https://github.com/Plusone7/web_img/blob/master/img/pswInput_01.png?raw=true) no-repeat; 
     color:#2F4A5F;
     padding-left:45px; 
-    font-size:23px;
+    font-size:15px;
     
     }
 .inputUser{
     margin:3px;
-    height:45px;
+    height:36px;
     width:300px;
-    background:url(https://github.com/Plusone7/web_img/blob/master/img/userInput.png?raw=true) no-repeat; 
+    background:url(https://github.com/Plusone7/web_img/blob/master/img/userInput_01.png?raw=true) no-repeat; 
     color:#2F4A5F;
     padding-left:45px;
-    font-size:22px;   
+    font-size:15px;   
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #2F4A5F;
