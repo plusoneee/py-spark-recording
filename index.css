@@ -8,8 +8,8 @@ body {
     {
     margin:3px;
     height:45px;
-    width:250px;
-    background:url(https://github.com/Plusone7/web_img/blob/master/img/pswInput.png?raw=true) no-repeat; 
+    width:290px;
+    background:url(https://github.com/Plusone7/web_img/blob/master/img/pswInput@2x.png?raw=true) no-repeat; 
     color:#2F4A5F;
     padding-left:45px; 
     font-size:23px;
@@ -18,7 +18,7 @@ body {
 .inputUser{
     margin:3px;
     height:45px;
-    width:250px;
+    width:300px;
     background:url(https://github.com/Plusone7/web_img/blob/master/img/userInput.png?raw=true) no-repeat; 
     color:#2F4A5F;
     padding-left:45px;
