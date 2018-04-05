@@ -17,7 +17,7 @@ def square(list1):
     return (new_list)
 print(square([4,3,2,1)])
 ```
-* ####  PySpark `lambda`:
+* ####  PySpark `map`:
 ```python
 n = [4,3,2,1]
 list( map(lambda x:x**2,n) )
