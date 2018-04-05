@@ -2,7 +2,6 @@
 * Filter items out of a sequence
 * Return filtered list
 
-
 Example 1 - over2 : 
 * #### Python Function:
 ```python
