@@ -17,7 +17,7 @@ lambda x:2 * x
 * `x * 2`: Return
 
 Example 2 - add: 
-* ### Python Function:
+* #### Python Function:
 ```python
 # add x and y
 def add(x,y):
