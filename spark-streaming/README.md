@@ -13,5 +13,5 @@ spark-submit  --packages org.apache.bahir:spark-streaming-mqtt_2.11:2.0.0 mqtt_s
 
 ### insert-mqttdata-ealstic
 ```
-spark-submit  --packages org.apache.bahir:spark-streaming-mqtt_2.11:2.0.0 insert-mqttdata-ealstic.py localhost:1883 topic
+spark-submit  --packages org.apache.bahir:spark-streaming-mqtt_2.11:2.0.0 insert-mqttdata-ealsticsearch.py localhost:1883 topic
 ```
