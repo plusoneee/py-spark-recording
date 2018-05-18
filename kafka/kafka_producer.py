@@ -1,12 +1,11 @@
 import json
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
-
 producer = KafkaProducer(bootstrap_servers=['localhost:9092'])
 my_topic = 'testing'
 
 # Asynchronous by default
-future = producer.send(my_topic,'123'.encode('UTF-8'))
+future = producer.send(my_topic,'send_start'.encode('UTF-8'))
 
 # Block for 'synchronous' sends
 try:
