@@ -2,14 +2,14 @@ import csv
 import json
 
 import time
-# import paho.mqtt.client as mqtt
-# client_id = ""
-# client = mqtt.Client(client_id=client_id)
-# user = ""
-# password = ""
-# client.username_pw_set(user, password)
-# client.connect("10.26.1.171")
-# topic = 'plusone'
+import paho.mqtt.client as mqtt
+client_id = ""
+client = mqtt.Client(client_id=client_id)
+user = ""
+password = ""
+client.username_pw_set(user, password)
+client.connect("localhost")
+topic = 'plusone'
 
 csvfile = open('./laser-20180102.csv', 'r')
 fieldnames = ("program name","machine name","material name","work-center","order of processing", 
@@ -18,6 +18,7 @@ fieldnames = ("program name","machine name","material name","work-center","order
 reader = csv.DictReader(csvfile, fieldnames)
 data =[]
 for row in reader:
+
     data.append({ 
         "0x01":row["program name"],
         "0x02":row["program name"],
@@ -35,10 +36,8 @@ for row in reader:
     })
 
 for i in range(0,2000):
-    # data[i] = str(data[i])
-    # client.publish(topic, data[i])
-    sendstr = "0x01:" + str(data[0]["0x01"]) + " 0x02:" + str(data[0]["0x02"]) + " 0x03:" + str(data[0]["0x04"]) + " 0x05:" + str(data[0]["0x05"]) + " 0x06:" + str(data[0]["0x06"]) + " 0x07:" + str(data[0]["0x07"]) + " 0x08:" + str(data[0]["0x08"]) + " 0x09:" + str(data[0]["0x09"]) + " 0x10:" + str(data[0]["0x10"]) + " 0x11:" + str(data[0]["0x11"]) + " 0x12:" + str(data[0]["0x12"]) 
-    # print( "0x01:"+ str(data[0]["0x01"]))
+    sendstr = "0x01:" + str(data[i]["0x01"]) + " 0x02:" + str(data[i]["0x02"]) + " 0x03:" + str(data[i]["0x04"]) + " 0x05:" + str(data[i]["0x05"]) + " 0x06:" + str(data[i]["0x06"]) + " 0x07:" + str(data[i]["0x07"]) + " 0x08:" + str(data[i]["0x08"]) + " 0x09:" + str(data[0]["0x09"]) + " 0x10:" + str(data[i]["0x10"]) + " 0x11:" + str(data[i]["0x11"]) + " 0x12:" + str(data[i]["0x12"]) 
+    client.publish(topic,sendstr)
     print(sendstr)
-    time.sleep(10)
+    time.sleep(3)
     
