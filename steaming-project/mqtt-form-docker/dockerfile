@@ -1,0 +1,17 @@
+FROM ubuntu:14.04
+MAINTAINER plusoneeeLiao
+#Email : y02121148s@gmail.com
+
+RUN apt-get update -y \
+	&& apt-get install -y \
+	      python3 -y
+RUN apt-get update -y \
+	&& apt-get install python3-pip  -y \
+ 	&& apt-get autoclean 
+RUN apt-get install mosquitto mosquitto-clients -y 
+RUN mosquitto -d 
+
+RUN mkdir opt/app
+COPY ./src ./opt/app
+RUN cd opt/app && pip3 install -r requirement.txt 
+CMD ["python3","/opt/app/app.py"]
