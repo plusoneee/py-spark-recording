@@ -168,7 +168,7 @@ ssc.awaitTermination()
 ```    
 * 好了之後就可以執行程式碼了：
 ```shell=
-spark-submit  PythonStreamingMQTT.py localhost:1883 mytopic
+spark-submit --packages org.apache.bahir:spark-streaming-mqtt_2.11:2.0.0  PythonStreamingMQTT.py localhost:1883 mytopic
 ```
 * 開啟另外一個終端機：
 ```shell=
