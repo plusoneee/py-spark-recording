@@ -6,7 +6,7 @@ sc = SparkContext("local[2]", "NetworkWordCount")
 ssc = StreamingContext(sc, 1)
 
 # Create a DStream that will connect to hostname:port, like localhost:9999
-lines = ssc.socketTextStream("<ip>", 9999)
+lines = ssc.socketTextStream("localhost", 9999)
 
 words = lines.flatMap(lambda line: line.split(","))
 pairs = words.map(lambda word: (word, 1))
