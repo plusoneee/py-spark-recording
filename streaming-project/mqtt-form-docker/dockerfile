@@ -14,4 +14,4 @@ RUN mosquitto -d
 RUN mkdir opt/app
 COPY ./src ./opt/app
 RUN cd opt/app && pip3 install -r requirement.txt 
-CMD ["python3","/opt/app/app.py"]
+ENTRYPOINT ["python3","/opt/app/app.py"]
